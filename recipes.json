@@ -1,28 +1,30 @@
 {
     "wood": {
+        "boat": { "batch_output": 1, "raw_per_batch": 2.0 },
+        "chest": { "batch_output": 1, "raw_per_batch": 2.0 },
+        "crafting_table": { "batch_output": 1, "raw_per_batch": 1.0 },
+        "door": { "batch_output": 3, "raw_per_batch": 2.0 },
+        "fence": { "batch_output": 3, "raw_per_batch": 2.0 },
+        "gate": { "batch_output": 1, "raw_per_batch": 2.0 },
+        "ladder": { "batch_output": 3, "raw_per_batch": 1.0 },
         "plank": { "batch_output": 4, "raw_per_batch": 1.0 },
-        "sticks": { "batch_output": , "raw_per_batch": },
-        "torches": { "batch_output": , "raw_per_batch": },
-        "crafting_table": { "batch_output": , "raw_per_batch": },
-        "chest": { "batch_output": , "raw_per_batch": },
-        "ladders": { "batch_output": , "raw_per_batch": },
-        "fence": { "batch_output": , "raw_per_batch": },
-        "gate": { "batch_output": , "raw_per_batch": },
-        "boat": { "batch_output": , "raw_per_batch": },
-        "slabs": { "batch_output": , "raw_per_batch": },
-        "doors": { "batch_output": , "raw_per_batch": },
-        "trapdoor": { "batch_output": , "raw_per_batch": },
-        "pickaxe": { "batch_output": , "raw_per_batch": },
-        "axe": { "batch_output": , "raw_per_batch": },
-        "shovel": { "batch_output": , "raw_per_batch": },
-        "hoe": { "batch_output": , "raw_per_batch": },
-        "sword": { "batch_output": , "raw_per_batch": },
-        "shield": { "batch_output": , "raw_per_batch": }
+        "shield": { "batch_output": 1, "raw_per_batch": 2.0 },
+        "slab": { "batch_output": 6, "raw_per_batch": 1.0 },
+        "stick": { "batch_output": 4, "raw_per_batch": 1.0 },
+        "torch": { "batch_output": 4, "raw_per_batch": 1.0 },
+        "trapdoor": { "batch_output": 2, "raw_per_batch": 1.0 },
+        "wooden_axe": { "batch_output": 1, "raw_per_batch": 2.0 },
+        "wooden_hoe": { "batch_output": 1, "raw_per_batch": 2.0 },
+        "wooden_pickaxe": { "batch_output": 1, "raw_per_batch": 2.0 },
+        "wooden_shovel": { "batch_output": 1, "raw_per_batch": 2.0 },
+        "wooden_sword": { "batch_output": 1, "raw_per_batch": 2.0 }
     },
     "cobblestone": {
-        "furnace": { "batch_output": , "raw_per_batch": },
-        "cobblestone_wall": { "batch_output": , "raw_per_batch": },
-        "cobblestone_stairs": { "batch_output": , "raw_per_batch": },
-        "brewing_stand": { "batch_output": , "raw_per_batch": }
-    }
+        "brewing_stand": { "batch_output": 1, "raw_per_batch": 3.0 },
+        "furnace": { "batch_output": 1, "raw_per_batch": 8.0 },
+        "slab": { "batch_output": 6, "raw_per_batch": 3.0 },
+        "steps": { "batch_output": 4, "raw_per_batch": 6.0 },
+        "wall": { "batch_output": 6, "raw_per_batch": 6.0 }
+  }
+
 }
