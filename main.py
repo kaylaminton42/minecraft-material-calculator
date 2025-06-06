@@ -7,25 +7,29 @@ RECIPE_FILE = "recipes.json"
 class Material:
     def __init__(self, name: str, recipes: Dict[str, Dict[str, float]]):
         """
-        name: the raw material (e.g., wood, cobblestone, etc)
-        a dict mapping each craftable item with
-            "batch_output": how many items you get per craft
-            "raw_per_batch": how many raw units the batch consumes
+        name: the raw material (e.g., wood, cobblestone, etc.)
+        recipes: a dict mapping each craftable item to:
+            {
+              "batch_output": how many items you get per craft,
+              "raw_per_batch": how many raw units that batch consumes
+            }
         """
         self.name = name
         self.recipes = recipes
 
     def raw_units_needed(self, item: str, quantity: int) -> float:
         """
-        Calculate how many raw units of material needed to produce the quantity of item, given that you can only craft in multiples of "batch_output"
+        Calculate how many raw units of this material are needed to produce exactly
+        `quantity` of `item`, given that you can only craft in multiples of batch_output.
+
         Steps:
-        1. Look up batch_output and raw_per_batch
-        2. Compute number of batches = ceil(quantity / batch_output)
-        3. Return batches * raw_per_batch
+        1. Look up batch_output and raw_per_batch from self.recipes[item].
+        2. Compute number of batches = ceil(quantity / batch_output).
+        3. Return batches * raw_per_batch.
         """
         if item not in self.recipes:
             raise ValueError(f"Item '{item}' not found in recipes for '{self.name}'.")
-        
+
         entry = self.recipes[item]
         batch_output = int(entry["batch_output"])
         raw_per_batch = float(entry["raw_per_batch"])
@@ -106,7 +110,7 @@ class MinecraftCalculator:
             qty = int(qty_str)
 
             needed_raw = mat.raw_units_needed(item, qty)
-            print(f"\nYou need {needed_raw} raw '{choice}' unit(s) to fract {qty} '{item}'(s).\n")
+            print(f"\nYou need {needed_raw} raw '{choice}' unit(s) to craft {qty} '{item}'(s).\n")
     
 if __name__ == "__main__":
     app = MinecraftCalculator()

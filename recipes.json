@@ -23,7 +23,7 @@
         "brewing_stand": { "batch_output": 1, "raw_per_batch": 3.0 },
         "furnace": { "batch_output": 1, "raw_per_batch": 8.0 },
         "slab": { "batch_output": 6, "raw_per_batch": 3.0 },
-        "steps": { "batch_output": 4, "raw_per_batch": 6.0 },
+        "stairs": { "batch_output": 4, "raw_per_batch": 6.0 },
         "wall": { "batch_output": 6, "raw_per_batch": 6.0 }
   }
 
